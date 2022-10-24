@@ -12,13 +12,14 @@ class Avtale:
     #e metode som returnerer en streng som kan skrives
 
     def __str__(self):
-        return Avtale  +str(self.tittel)+'/'+str(self.sted)+'/'+datetime(self.starttidspunkt)+':'+int(self.varighet)
+        return Avtale  +str(self.tittel)+'/'+str(self.sted)+'/' """datetime eller int? """+datetime(self.starttidspunkt)+':'+int(self.varighet)
 
 #f
 tittel = input("Skriv inn hva avtalen gjelder ")
 sted = input("Skriv sted ")
 sted = str(sted)
 starttidspunkt = input("Skriv starttidspunkt ")
+#datetime eller int?
 starttidspunkt = datetime(starttidspunkt)
 varighet = input("Skriv varighet på avtalen ")
 varighet = int(varighet)
