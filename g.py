@@ -4,12 +4,10 @@ def avtaler():
     avtaleliste.append(lag_avtale())
     try:
         for i in range(len(avtaleliste)):
-            print("Avtalenummer:", i+1, avtaleliste[i].tittel)
-        return avtaler()
+            print("Avtalenummer:", i+1, "Tittel:", avtaleliste[i].tittel)
     except ValueError:
         pass
 avtaler()
-lag_avtale()
 
 
 
