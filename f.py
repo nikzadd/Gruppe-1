@@ -26,6 +26,6 @@ def lag_avtale():
     varighet = int(input("Skriv varighet på avtalen "))
     DinAvtale = Avtale(tittel, sted, starttidspunkt, varighet)
     return DinAvtale
-
+lag_avtale()
 
 
