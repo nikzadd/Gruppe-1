@@ -26,6 +26,8 @@ def lag_avtale():
     DinAvtale = Avtale(tittel, sted, starttidspunkt, varighet)
     return DinAvtale
 
+
+
 if __name__ =="__main__":
     lag_avtale()
 
