@@ -5,7 +5,7 @@ def avtaler():
     for i in range(len(avtaleliste)):
         print("Avtalenummer:", i+1, "Tittel:", avtaleliste[i].tittel)
 avtaler()
-bøsj
+
 
 
 
