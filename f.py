@@ -18,14 +18,15 @@ class Avtale:
 def lag_avtale():
     tittel = input("Skriv inn hva avtalen gjelder ")
     sted = str(input("Skriv sted "))
-    starttidspunkt = input("Skriv starttidspunkt ")
+    starttidspunkt = str(input("Skriv starttidspunkt "))
 
     #datetime eller int?
 
-    starttidspunkt = int(starttidspunkt)
     varighet = int(input("Skriv varighet på avtalen "))
     DinAvtale = Avtale(tittel, sted, starttidspunkt, varighet)
     return DinAvtale
-lag_avtale()
+
+if __name__ =="__main__":
+    lag_avtale()
 
 
