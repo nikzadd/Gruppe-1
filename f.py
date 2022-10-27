@@ -11,9 +11,8 @@ class Avtale:
     
     #e metode som returnerer en streng som kan skrives
 
-    def __str__(self):
-        #return Avtale  +str(self.tittel)+'/'+str(self.sted)+'/' """datetime eller int? """+datetime(self.starttidspunkt)+':'+int(self.varighet)
-        return f"Tittel: {self.tittel}, Varighet: {self.varighet}"
+    def __str__ (self):
+        return f"Tittel: {self.tittel}, Sted: {self.sted}, StartTidspunkt: {self.starttidspunkt} Varighet: {self.varighet}"
 #f
 from datetime import datetime
 def lag_avtale():
@@ -25,9 +24,7 @@ def lag_avtale():
     DinAvtale = Avtale(tittel, sted, starttidspunkt, varighet)
     return DinAvtale
 
-
-
-if __name__ =="__main__":
-    lag_avtale()
+    if __name__ =="__main__":
+        lag_avtale()
 
 
