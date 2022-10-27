@@ -15,5 +15,5 @@ def liste_avtaler(liste_avtaler, dato):
 if __name__ == "__main__":
     dato_sjekk = input("Skriv inn dato: ")
     dato = datetime.fromisoformat(dato_sjekk)
-    test = liste_avtaler(0, dato)
+    test = liste_avtaler(liste_avtaler, dato)
     print(test)
