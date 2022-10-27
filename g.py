@@ -3,7 +3,7 @@ from h import avtale_til_tekstfil
 def avtaler(avtaleliste, overskrift="Avtale:"):
     i = 0
     print(overskrift)
-    for i in range(len(avtaleliste)):
+    for linje in range(len(avtaleliste)):
         print("Avtalenummer:", i+1, "Tittel:", avtaleliste[i].tittel, "Sted:",
               avtaleliste[i].sted, "Varighet:", avtaleliste[i].varighet, "Starttidspunkt:", avtaleliste[i].starttidspunkt)
         i = i+1
