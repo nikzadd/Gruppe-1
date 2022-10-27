@@ -15,13 +15,12 @@ class Avtale:
         #return Avtale  +str(self.tittel)+'/'+str(self.sted)+'/' """datetime eller int? """+datetime(self.starttidspunkt)+':'+int(self.varighet)
         return f"Tittel: {self.tittel}, Varighet: {self.varighet}"
 #f
+from datetime import datetime
 def lag_avtale():
     tittel = input("Skriv inn hva avtalen gjelder ")
     sted = str(input("Skriv sted "))
-    starttidspunkt = str(input("Skriv starttidspunkt "))
-
-    #datetime eller int?
-
+    dato = input("Skriv inn starttidspunkt")
+    starttidspunkt = datetime.fromisoformat(dato)
     varighet = int(input("Skriv varighet på avtalen "))
     DinAvtale = Avtale(tittel, sted, starttidspunkt, varighet)
     return DinAvtale
