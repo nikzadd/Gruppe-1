@@ -3,6 +3,7 @@ from g import avtale_tom
 from datetime import datetime
 
 
+#Hent fra avtalefil
 
 def liste_avtaler(avtale_tom, dato):
     liste_avtaler = []
