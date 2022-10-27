@@ -1,6 +1,8 @@
-from g import avtaler
+
 def avtale_til_tekstfil(avtaler):
-    for linje in avtaler:
-        avtale_til_tekstfil.write(str((i+1, avtaler[linje].tittel, avtaler[linje].sted,
-            avtaler[linje].varighet, avtaler[linje].starttidspunkt + "\n"))
-avtalefil = open("avatalefil.txt", "w", encoding="UTF8")
+    i = 0
+    avtalefil = open("avatalefil.txt", "a", encoding="UTF8")
+    for avtale in avtaler:
+        avtalefil.write(str(str(i+1) + avtale.tittel + avtale.sted +
+            str(avtale.varighet) + str(avtale.starttidspunkt) + "\n"))
+        i = i+1
