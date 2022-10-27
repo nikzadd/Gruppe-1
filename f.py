@@ -18,7 +18,7 @@ from datetime import datetime
 def lag_avtale():
     tittel = input("Skriv inn hva avtalen gjelder ")
     sted = str(input("Skriv sted "))
-    dato = input("Skriv inn starttidspunkt")
+    dato = input("Skriv inn starttidspunkt. Skriv på format: YYYY-MM-DD TT:MM:SS")
     starttidspunkt = datetime.fromisoformat(dato)
     varighet = int(input("Skriv varighet på avtalen "))
     DinAvtale = Avtale(tittel, sted, starttidspunkt, varighet)
