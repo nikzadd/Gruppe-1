@@ -12,13 +12,13 @@ class Avtale:
         return 'Avtale ' +str(self.tittel)+'/'+str(self.sted)+'/'+int(self.starttidspunkt)+':'+int(self.varighet)
 
 
-tittel = input("Skriv inn avtale")
-sted = input("Vennligst skriv sted")
+tittel = input ( " Skriv inn avtale")
+sted = input ( " Vennligst skriv sted")
 sted = str(sted)
-starttidspunkt = input("Vennligst skriv starttidspunkt")
+starttidspunkt = input ( " Vennligst skriv starttidspunkt")
 starttidspunkt = int(starttidspunkt)
-varighet = input("Vennligst skriv inn varighet")
+varighet = input ( " Vennligst skriv inn varighet")
 varighet = int(varighet)
 
-DinAvtale = Avtale(tittel,sted,starttidspunkt,varighet)
+DinAvtale = Avtale(tittel, sted, starttidspunkt, varighet)
 print(DinAvtale)
