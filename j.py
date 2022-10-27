@@ -11,7 +11,7 @@ def liste_avtaler(liste_avtaler, dato):
                 avtalefil[1].append = liste_avtaler
     return liste_avtaler
 
-test
+#test
 if __name__ == "__main__":
     dato_sjekk = input("Skriv inn dato: ")
     dato = datetime.fromisoformat(dato_sjekk)
