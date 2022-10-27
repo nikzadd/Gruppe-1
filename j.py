@@ -1,21 +1,19 @@
-import datetime
-from g import avtale_tom
 from datetime import datetime
 
 
 #Hent fra avtalefil
 
-def liste_avtaler(avtale_tom, dato):
+def liste_avtaler(liste_avtaler, dato):
     liste_avtaler = []
-    for i in avtale_tom:
-        if dato == avtale_tom[2]:
-            avtale_tom[0].append = liste_avtaler
+    with open("avtalefil.txt", "r", encoding="UTF8") as avtalefil:
+        for j in avtalefil:
+            if dato == avtalefil[3]:
+                avtalefil[1].append = liste_avtaler
     return liste_avtaler
 
-#test
+test
 if __name__ == "__main__":
     dato_sjekk = input("Skriv inn dato: ")
     dato = datetime.fromisoformat(dato_sjekk)
-    test = liste_avtaler(avtale_tom, dato)
+    test = liste_avtaler(0, dato)
     print(test)
-
