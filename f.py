@@ -25,10 +25,4 @@ def lag_avtale():
     return DinAvtale
 
 if __name__ =="__main__":
-<<<<<<< HEAD
     lag_avtale()
-=======
-    lag_avtale()
-
-
->>>>>>> f04859105f7d922ed5d9df1b01e76000333edbb0
