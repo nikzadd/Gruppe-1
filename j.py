@@ -1,10 +1,20 @@
 from datetime import datetime
 from f import lag_avtale
-from g import avtale_tom
+from g import avtaler
+from e import Avtale
 
-def liste_sjekk(avtale_tom, dato):
-    liste_avtaler = []
-    for avtale in avtale_tom:
+def avtale_sjekk(avtale_liste, dato):
+    liste_avtaler_samtidig = []
+    for avtale in avtale_liste:
         if avtale == dato:
-            lag_avtale.tittel.append(liste_avtaler)
-    return liste_avtaler
+            Avtale.tittel.append(liste_avtaler_samtidig)
+    return liste_avtaler_samtidig
+
+# if __name__ == "__main__":
+#     avtale_liste = []
+#     avtale_liste.append(lag_avtale())
+#     avtaler(avtale_liste)
+#     print(avtale_liste)
+#     dato_sjekk = input("Sjekk dato: ")
+#     dato_1 = datetime.fromisoformat(dato_sjekk)
+#     avtale_sjekk(avtale_liste, dato_1)
