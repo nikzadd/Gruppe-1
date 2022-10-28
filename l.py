@@ -5,13 +5,14 @@ from i import lesing_av_fil
 
 liste_med_avtaler = []
 
-
 meny_valg = {
     1: "Lese inn avtaler fra fil",
     2: "Skrive avtale til fil",
     3: "Skrive inn en ny avtale",
     4: "Skrive ut alle avtalene",
-    5: "Avlutte menyvalget",
+    5: "Slette en avtale",
+    6: "Redigere en avtale",
+    7: "Avslutte"
 }
 
 def print_meny():
@@ -28,6 +29,17 @@ def valg3():
 
 def valg4():
     avtaler(liste_med_avtaler)
+
+def valg5():
+    valget = int(input("Hvilken avtale vil du fjerne? Skriv nummeret til avtalen: "))
+    try:
+        liste_med_avtaler.pop(valget-1)
+        avtale_til_tekstfil(liste_med_avtaler)
+    except ValueError:
+        print("oisann! det gikk ikke")
+    print("Da fjernet du avtale nummer", valget)
+
+#def valg6():
 
 
 while(True):
@@ -47,7 +59,11 @@ while(True):
     elif valg == 4:
         valg4()
     elif valg == 5:
-        print("Takk og ha det bra")
+        valg5()
+    elif valg == 6:
+        valg6()
+    elif valg == 7:
+        print("Takk og ha det bra!")
         break
     else:
         print("Ugyldig valg, velg et nummer mellom 1 og 5:")

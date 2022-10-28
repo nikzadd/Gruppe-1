@@ -8,6 +8,7 @@ def avtaler(avtaleliste, overskrift="Avtale:"):
         print("Avtalenummer:", i+1, "Tittel:", avtaleliste[i].tittel, "Sted:",
               avtaleliste[i].sted, "Varighet:", avtaleliste[i].varighet, "Starttidspunkt:", avtaleliste[i].starttidspunkt)
         i = i+1
+
 if __name__ == "__main__":
     avtale_tom = []
     avtale_tom.append(lag_avtale())
