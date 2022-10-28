@@ -11,7 +11,9 @@ meny_valg = {
     2: "Skrive avtale til fil",
     3: "Skrive inn en ny avtale",
     4: "Skrive ut alle avtalene",
-    5: "Avlutte menyvalget",
+    5: "Slette en avtale",
+    6: "Redigere en avtale",
+    7: "Avslutte"
 }
 
 def print_meny():
@@ -29,12 +31,22 @@ def valg3():
 def valg4():
     avtaler(liste_med_avtaler)
 
+def valg5():
+    valget = int(input("Hvilken avtale vil du fjerne? Skriv nummeret til avtalen: ") + 1)
+    try:
+        liste_med_avtaler.remove(valget)
+    except ValueError:
+        pass
+    print("Da fjernet du avtale nummer", valget)
+
+#def valg6():
+
 
 while(True):
     print_meny()
     valg = ""
     try:
-        valg = int(input("Hva ønsker du å gjøre?: "))
+        valg = input("Hva ønsker du å gjøre?: ")
     except ValueError:
         print("Feil inntasting, velg et nummer:")
     
@@ -47,6 +59,10 @@ while(True):
     elif valg == 4:
         valg4()
     elif valg == 5:
+        valg5()
+    elif valg == 6:
+        valg6()
+    elif valg == 7:
         print("Takk og ha det bra")
         break
     else:

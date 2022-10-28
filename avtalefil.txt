@@ -1,3 +1,2 @@
 Avtalenummer: Tittel: Sted: Starttidspunkt: Varighet: 
-1; Hepattitt; Molde; 1111-11-11 00:00:00; 23423
-2; reger; ger; 1111-11-11 00:00:00; 32
+1; hei; ger; 1111-11-11 00:00:00; 12
