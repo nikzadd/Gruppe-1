@@ -1,9 +1,6 @@
 from f import lag_avtale
 from h import avtale_til_tekstfil
 
-
-
-
 def finn_en_streng():
     nokkelord=str(input("Skriv nøkkelord eller setning i en avtale"))
     try:
@@ -14,6 +11,14 @@ def finn_en_streng():
         pass
 
 finn_en_streng()
+
+
+
+
+
+
+
+
 
 
 
