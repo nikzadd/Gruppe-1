@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 Avtalenummer: Tittel: Sted: Starttidspunkt: Varighet: 
 1; Kløe på tissen; Molde; 2022-02-02 10:10:10; 232
+=======
+1; testtt; skolen; 2022-10-10 15:00:00; 1
+1; dsjaodasd; dhlsadjsaoda; 2022-10-10 15:00:00; 1
+>>>>>>> a72c845b37e7fefc8bd6b697edda94244cbbc170
