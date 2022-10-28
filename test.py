@@ -1,40 +1,46 @@
-menu_options = {
-    1: 'Option 1',
-    2: 'Option 2',
-    3: 'Option 3',
-    4: 'Exit',
+meny_valg = {
+    1: "lese inn avtaler fra fil",
+    2: "skrive avtale til fil",
+    3: "skrive inn en ny avtale",
+    4: "skrive ut alle avtalene",
+    5: "avlutte menyvalge",
 }
 
-def print_menu():
-    for key in menu_options.keys():
-        print (key, '--', menu_options[key] )
+def print_meny():
+    for valget in meny_valg.keys():
+        print (valget, '--', meny_valg[valget] )
 
-def option1():
-     print('Handle option \'Option 1\'')
+def valg1():
+     print("her er valg1")
 
-def option2():
-     print('Handle option \'Option 2\'')
+def valg2():
+     print("her er valg2")
 
-def option3():
-     print('Handle option \'Option 3\'')
+def valg3():
+     print("her er valg3")
 
-if __name__=='__main__':
-    while(True):
-        print_menu()
-        option = ''
-        try:
-            option = int(input('Enter your choice: '))
-        except:
-            print('Wrong input. Please enter a number ...')
-        #Check what choice was entered and act accordingly
-        if option == 1:
-           option1()
-        elif option == 2:
-            option2()
-        elif option == 3:
-            option3()
-        elif option == 4:
-            print('Thanks message before exiting')
-            exit()
-        else:
-            print('Invalid option. Please enter a number between 1 and 4.')
+def valg4():
+    print("her er valg 4")
+
+
+while(True):
+    print_meny()
+    valg = ""
+    try:
+        valg = int(input("hva ønsker du å gjøre: "))
+    except:
+        print("feil inntasting, velg et nummer:")
+    
+    if valg == 1:
+        valg1()
+    elif valg == 2:
+        valg2()
+    elif valg == 3:
+        valg3()
+    elif valg == 4:
+        valg4()
+    elif valg == 5:
+        print("takk og hade bra")
+        break
+    #else:
+        #print("ugyldig valg, velg ett nummer mellom 1 og 5:")
