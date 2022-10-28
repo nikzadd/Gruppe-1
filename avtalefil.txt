@@ -1,2 +1,1 @@
-Avtalenummer: Tittel: Sted: Starttidspunkt: Varighet: 
-1; ege; gfe; 1111-11-11 00:00:00; 345
+
