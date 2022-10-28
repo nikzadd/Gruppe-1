@@ -1,3 +1,0 @@
-Avtalenummer: Tittel: Sted: Starttidspunkt: Varighet: 
-1; klakla; klakla; 1009-09-09 10:10:10; 3
-2; testnr2; testttt; 1002-08-08 15:00:00; 3
