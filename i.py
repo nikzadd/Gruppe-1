@@ -1,11 +1,16 @@
-minfil = open("avtalefil.txt", "r")
+from f import Avtale
 
-def lesing_av_fil(minfil):
+
+def lesing_av_fil():
+    minfil = open("avtalefil.txt", "r")
+    minfil.readline()
     for linje in minfil:
         try:
-            split = linje.strip().split(";")
+            splitte = linje.strip().split(";")
+            avtale = Avtale(splitte[1], splitte[2], splitte[3], splitte[4])
+            print(avtale)
         except ValueError:
-            print(linje)
+            continue
 
 
 
