@@ -1,3 +1,4 @@
 Avtalenummer: Tittel: Sted: Starttidspunkt: Varighet: 
 1; er; d; 1111-11-11 00:00:00; 34
 2; d; f; 1111-11-11 00:00:00; 23
+3; fhg; gjh; 1111-11-11 00:00:00; 67
