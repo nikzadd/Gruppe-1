@@ -1,9 +1,17 @@
+from h import avtale_til_tekstfil
+from f import lag_avtale
+from g import avtaler
+from i import lesing_av_fil
+
+liste_med_avtaler = []
+
+
 meny_valg = {
-    1: "lese inn avtaler fra fil",
-    2: "skrive avtale til fil",
-    3: "skrive inn en ny avtale",
-    4: "skrive ut alle avtalene",
-    5: "avlutte menyvalge",
+    1: "Lese inn avtaler fra fil",
+    2: "Skrive avtale til fil",
+    3: "Skrive inn en ny avtale",
+    4: "Skrive ut alle avtalene",
+    5: "Avlutte menyvalget",
 }
 
 def print_meny():
@@ -11,25 +19,24 @@ def print_meny():
         print (valget, "--", meny_valg[valget] )
 
 def valg1():
-     print("her er valg1")
-
+    lesing_av_fil()
 def valg2():
-     print("her er valg2")
+     avtale_til_tekstfil(liste_med_avtaler)
 
 def valg3():
-     print("her er valg3")
+     liste_med_avtaler.append(lag_avtale())
 
 def valg4():
-    print("her er valg 4")
+    avtaler(liste_med_avtaler)
 
 
 while(True):
     print_meny()
     valg = ""
     try:
-        valg = int(input("hva ønsker du å gjøre: "))
-    except:
-        print("feil inntasting, velg et nummer:")
+        valg = int(input("Hva ønsker du å gjøre?: "))
+    except ValueError:
+        print("Feil inntasting, velg et nummer:")
     
     if valg == 1:
         valg1()
@@ -40,7 +47,7 @@ while(True):
     elif valg == 4:
         valg4()
     elif valg == 5:
-        print("takk og hade bra")
+        print("Takk og ha det bra")
         break
     else:
-        print("ugyldig valg, velg ett nummer mellom 1 og 5:")
+        print("Ugyldig valg, velg et nummer mellom 1 og 5:")
