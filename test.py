@@ -8,7 +8,7 @@ meny_valg = {
 
 def print_meny():
     for valget in meny_valg.keys():
-        print (valget, '--', meny_valg[valget] )
+        print (valget, "--", meny_valg[valget] )
 
 def valg1():
      print("her er valg1")
