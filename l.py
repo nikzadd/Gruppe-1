@@ -42,5 +42,5 @@ while(True):
     elif valg == 5:
         print("takk og hade bra")
         break
-    #else:
-        #print("ugyldig valg, velg ett nummer mellom 1 og 5:")
+    else:
+        print("ugyldig valg, velg ett nummer mellom 1 og 5:")
