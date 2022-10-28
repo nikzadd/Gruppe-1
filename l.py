@@ -5,7 +5,6 @@ from i import lesing_av_fil
 
 liste_med_avtaler = []
 
-
 meny_valg = {
     1: "Lese inn avtaler fra fil",
     2: "Skrive avtale til fil",
@@ -32,11 +31,12 @@ def valg4():
     avtaler(liste_med_avtaler)
 
 def valg5():
-    valget = int(input("Hvilken avtale vil du fjerne? Skriv nummeret til avtalen: ") + 1)
+    valget = int(input("Hvilken avtale vil du fjerne? Skriv nummeret til avtalen: "))
     try:
-        liste_med_avtaler.remove(valget)
+        liste_med_avtaler.pop(valget-1)
+        avtale_til_tekstfil(liste_med_avtaler)
     except ValueError:
-        pass
+        print("oisann! det gikk ikke")
     print("Da fjernet du avtale nummer", valget)
 
 #def valg6():
@@ -46,7 +46,7 @@ while(True):
     print_meny()
     valg = ""
     try:
-        valg = input("Hva ønsker du å gjøre?: ")
+        valg = int(input("Hva ønsker du å gjøre?: "))
     except ValueError:
         print("Feil inntasting, velg et nummer:")
     
@@ -63,7 +63,7 @@ while(True):
     elif valg == 6:
         valg6()
     elif valg == 7:
-        print("Takk og ha det bra")
+        print("Takk og ha det bra!")
         break
     else:
         print("Ugyldig valg, velg et nummer mellom 1 og 5:")
