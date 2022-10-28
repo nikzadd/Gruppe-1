@@ -1,1 +1,3 @@
-
+Avtalenummer: Tittel: Sted: Starttidspunkt: Varighet: 
+1; hei; hDE; 1111-11-11 00:00:00; 12
+2; tiss; tass; 1111-11-11 00:00:00; 54

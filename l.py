@@ -36,11 +36,17 @@ def valg5():
         liste_med_avtaler.pop(valget-1)
         avtale_til_tekstfil(liste_med_avtaler)
     except ValueError:
-        print("oisann! det gikk ikke")
+        print("Oisann! Det gikk ikke")
     print("Da fjernet du avtale nummer", valget)
 
-#def valg6():
-
+def valg6():
+    rediger_valg = int(input("Hvilken avtale vil du redigere? Skriv nummeret til avtalen: "))
+    try:
+        liste_med_avtaler.pop(rediger_valg-1)
+        avtale_til_tekstfil(liste_med_avtaler)
+        valg3()
+    except ValueError:
+        pass
 
 while(True):
     print_meny()
