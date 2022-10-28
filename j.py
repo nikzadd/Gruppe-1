@@ -6,9 +6,9 @@ from datetime import datetime
 def liste_avtaler(liste_avtaler, dato):
     liste_avtaler = []
     with open("avtalefil.txt", "r", encoding="UTF8") as avtalefil:
-        for j in avtalefil:
-            if dato == avtalefil[3]:
-                avtalefil[1].append = liste_avtaler
+        for linje in avtalefil:
+            if dato == linje:
+                linje.append = liste_avtaler
     return liste_avtaler
 
 #test
