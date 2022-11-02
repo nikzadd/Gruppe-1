@@ -1,13 +1,13 @@
 from datetime import datetime
 from f import lag_avtale
-from g import avtaler
 from e import Avtale
 
 def avtale_sjekk(avtale_liste, dato):
     liste_avtaler_samtidig = []
     for avtale in avtale_liste:
-        if avtale == dato:
-            Avtale.tittel.append(liste_avtaler_samtidig)
+        if avtale == Avtale.starttidspunkt: #Avtale.startidspunkt
+            if avtale == dato:
+                Avtale.tittel.append(liste_avtaler_samtidig)
     return liste_avtaler_samtidig
 
 # if __name__ == "__main__":
