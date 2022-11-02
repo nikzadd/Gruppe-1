@@ -30,6 +30,8 @@ def valg3():
 def valg4():
     avtaler(liste_med_avtaler)
 
+#m
+
 def valg5():
     valget = int(input("Hvilken avtale vil du fjerne? Skriv nummeret til avtalen: "))
     try:
@@ -38,6 +40,8 @@ def valg5():
     except ValueError:
         print("Oisann! Det gikk ikke")
     print("Da fjernet du avtale nummer", valget)
+
+#n
 
 def valg6():
     rediger_valg = int(input("Hvilken avtale vil du redigere? Skriv nummeret til avtalen: "))
