@@ -3,14 +3,14 @@ from h import avtale_til_tekstfil
 
 def finn_en_streng():
     nokkelord=str(input("Skriv nøkkelord eller setning i en avtale"))
-    try:
-        nokkelord_open = open("avatalefil.txt", "r", encoding="UTC8")
-        for i in range(len(avtaleliste)):
-            str(nokkelord_open.find(nokkelord))
-    except:
-        pass
-
+    with open("avtalefil.txt",'r',encoding="UTF8") as nokkelord_open:
+        linjer=nokkelord_open.readlines()
+        for linje in linjer:
+            if linje.find(nokkelord) != -1:
+                print("Avtalenummer:",linjer.index(linje)+1, linje)
 finn_en_streng()
+
+
 
 
 
