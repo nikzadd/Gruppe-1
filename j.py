@@ -2,6 +2,7 @@ from datetime import datetime
 
 
 #Hent fra avtalefil
+from f import lag_avtale
 
 def liste_sjekk(liste_avtaler, dato):
     liste_avtaler = []
