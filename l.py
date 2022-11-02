@@ -2,6 +2,7 @@ from h import avtale_til_tekstfil
 from f import lag_avtale
 from g import avtaler
 from i import lesing_av_fil
+from datetime import datetime
 
 liste_med_avtaler = []
 
@@ -12,7 +13,8 @@ meny_valg = {
     4: "Skrive ut alle avtalene",
     5: "Slette en avtale",
     6: "Redigere en avtale",
-    7: "Avslutte"
+    7: "Avslutte",
+    8: "Sjekke samme dato"
 }
 
 def print_meny():
@@ -52,6 +54,13 @@ def valg6():
     except ValueError:
         pass
 
+def avtale_sjekk(dato, avtale_tom):
+    liste_avtaler_samtidig = []
+    for avtale in avtale_tom:
+        if avtale.starttidspunkt == dato: #Avtale.startidspunkt
+            liste_avtaler_samtidig.append(avtale.tittel)
+    return liste_avtaler_samtidig
+
 while(True):
     print_meny()
     valg = ""
@@ -75,5 +84,9 @@ while(True):
     elif valg == 7:
         print("Takk og ha det bra!")
         break
+    elif valg == 8:
+        datoen = (input("Skriv inn en dato på datetime-format:"))
+        datetimedato = datetime.fromisoformat(datoen)
+        print(avtale_sjekk(datetimedato, liste_med_avtaler))
     else:
         print("Ugyldig valg, velg et nummer mellom 1 og 5:")

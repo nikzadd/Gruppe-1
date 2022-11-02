@@ -1,2 +1,2 @@
 Avtalenummer: Tittel: Sted: Starttidspunkt: Varighet: 
-1; test; tres; 1111-11-11 00:00:00; 42
+1; tee; tete; 1111-11-11 00:00:00; 432
