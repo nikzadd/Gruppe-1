@@ -51,6 +51,7 @@ def valg6():
         liste_med_avtaler.pop(rediger_valg-1)
         avtale_til_tekstfil(liste_med_avtaler)
         valg3()
+        
     except ValueError:
         pass
 
