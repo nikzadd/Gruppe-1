@@ -1,4 +1,4 @@
-from 2d import lag_kategori
+#from 2d import lag_kategori
 
 def lag_kategori():
     id = input("Skriv inn ID: ")
