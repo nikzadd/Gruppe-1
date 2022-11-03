@@ -23,12 +23,11 @@ def lag_kategori():
     Dinkategori = Kategori(id, navn, prioritet)
     return Dinkategori
 
-
 ##########################################################################
 
 #e
 
-def kategorier(avtaleliste, overskrift="Kategori:"):
+def kategorier(avtaleliste, overskrift="Kategori:"):    
     i = 0
     print(overskrift)
     for linje in range(len(avtaleliste)):
@@ -48,6 +47,7 @@ if __name__ =="__main__":
     kategorier(kategori_tom)
     kategori_til_tekstfil(kategori_tom)
 
+
 ###########################################
 
 #f
@@ -60,7 +60,24 @@ if __name__ =="__main__":
 
 
 
-########################
+##########################################################################
+
+
+#g
+
+class Sted:
+    def __init__(self, id = None, navn = None, adresse = None):
+        self.id = id
+        self.navn = navn
+        self.adresse = adresse
+
+#    def __str__(self):
+#        return 'Sted ' + str(self.id + self.navn + self.adresse)
+
+    def __str__(self) -> str:
+        return f"Id: {self.id}, stedsnavn: {self.sted}, adresse: {self.adresse}"
+
+##########################################################################
 
 #h
 def nytt_sted():
@@ -69,4 +86,3 @@ def nytt_sted():
     adresse = input("Skriv inn adresse:")
     nyttSted = Kategori(id, navn, adresse)
     return nyttSted
-
