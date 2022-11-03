@@ -1,11 +1,7 @@
 #c
 
 class Kategori:
-<<<<<<< Updated upstream
     def __init__(self, id = 1, navn=None, prioritet=None):
-=======
-    def __init__(self, id, navn, prioritet):
->>>>>>> Stashed changes
         self.id = id
         self.navn = navn
         self.prioritet = prioritet
