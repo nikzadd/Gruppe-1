@@ -24,3 +24,20 @@ def lag_kategori():
 
 if __name__ =="__main__":
     lag_kategori()
+
+
+
+
+
+
+
+
+
+#######################
+#h
+def nytt_sted():
+    id = str(input("Skriv inn id: "))
+    navn = input("Skriv navn: ")
+    adresse = input("Skriv inn adresse:")
+    nyttSted = Kategori(id, navn, adresse)
+    return nyttSted
