@@ -1,7 +1,7 @@
 #c
 
 class Kategori:
-    def __init__(self, id = 1, navn=None, prioritet=None):
+    def __init__(self, id=None, navn=None, prioritet=1):
         self.id = id
         self.navn = navn
         self.prioritet = prioritet
@@ -30,3 +30,16 @@ if __name__ =="__main__":
 
 #e
 
+def avtaler(avtaleliste, overskrift="Avtale:"):
+    i = 0
+    print(overskrift)
+    for linje in range(len(avtaleliste)):
+        print("ID:", avtaleliste[i].id, "Navn:", avtaleliste[i].navn, "Prioritet:",
+              avtaleliste[i].prioritet)
+        i = i+1
+
+def avtale_til_tekstfil(avtaler):
+    kategorifil = open("nyavtalefil.txt", "w", encoding="UTF8")
+    kategorifil.write("ID: " + "Navn: " + "Prioritet: " + "\n")
+    for avtale in avtaler:
+        kategorifil.write(str(avtale.id + "; " + avtale.navn + "; " + avtale.prioritet + "; " +"\n"))
