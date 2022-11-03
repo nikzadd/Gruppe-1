@@ -23,14 +23,12 @@ def lag_kategori():
     Dinkategori = Kategori(id, navn, prioritet)
     return Dinkategori
 
-if __name__ =="__main__":
-    lag_kategori()
 
 ##########################################################################
 
 #e
 
-def avtaler(avtaleliste, overskrift="Avtale:"):
+def kategorier(avtaleliste, overskrift="Kategori:"):
     i = 0
     print(overskrift)
     for linje in range(len(avtaleliste)):
@@ -38,8 +36,16 @@ def avtaler(avtaleliste, overskrift="Avtale:"):
               avtaleliste[i].prioritet)
         i = i+1
 
-def avtale_til_tekstfil(avtaler):
-    kategorifil = open("nyavtalefil.txt", "w", encoding="UTF8")
+def kategori_til_tekstfil(avtaler):
+    kategorifil = open("kategorifil.txt", "w", encoding="UTF8")
     kategorifil.write("ID: " + "Navn: " + "Prioritet: " + "\n")
     for avtale in avtaler:
-        kategorifil.write(str(avtale.id + "; " + avtale.navn + "; " + avtale.prioritet + "; " +"\n"))
+        kategorifil.write(str(str(avtale.id) + "; " + str(avtale.navn) + "; " + str(avtale.prioritet) + "; " +"\n"))
+
+
+
+if __name__ =="__main__":
+    kategori_tom = []
+    kategori_tom.append(lag_kategori())
+    kategorier(kategori_tom)
+    kategori_til_tekstfil(kategori_tom)
