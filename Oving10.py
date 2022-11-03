@@ -23,12 +23,10 @@ def lag_kategori():
     Dinkategori = Kategori(id, navn, prioritet)
     return Dinkategori
 
-
 ##########################################################################
 
 #e
 
-<<<<<<< Updated upstream
 def kategorier(avtaleliste, overskrift="Kategori:"):
     i = 0
     print(overskrift)
@@ -43,15 +41,11 @@ def kategori_til_tekstfil(avtaler):
     for avtale in avtaler:
         kategorifil.write(str(str(avtale.id) + "; " + str(avtale.navn) + "; " + str(avtale.prioritet) + "; " +"\n"))
 
-
-
 if __name__ =="__main__":
     kategori_tom = []
     kategori_tom.append(lag_kategori())
     kategorier(kategori_tom)
     kategori_til_tekstfil(kategori_tom)
-=======
-
 
 ##########################################################################
 
@@ -70,4 +64,11 @@ class Sted:
         return f"Id: {self.id}, stedsnavn: {self.sted}, adresse: {self.adresse}"
 
 ##########################################################################
->>>>>>> Stashed changes
+
+#h
+def nytt_sted():
+    id = str(input("Skriv inn id: "))
+    navn = input("Skriv navn: ")
+    adresse = input("Skriv inn adresse:")
+    nyttSted = Kategori(id, navn, adresse)
+    return nyttSted
