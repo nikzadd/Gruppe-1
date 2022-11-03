@@ -28,6 +28,7 @@ def lag_kategori():
 
 #e
 
+<<<<<<< Updated upstream
 def kategorier(avtaleliste, overskrift="Kategori:"):
     i = 0
     print(overskrift)
@@ -49,3 +50,24 @@ if __name__ =="__main__":
     kategori_tom.append(lag_kategori())
     kategorier(kategori_tom)
     kategori_til_tekstfil(kategori_tom)
+=======
+
+
+##########################################################################
+
+#g
+
+class Sted:
+    def __init__(self, id = None, navn = None, adresse = None):
+        self.id = id
+        self.navn = navn
+        self.adresse = adresse
+
+#    def __str__(self):
+#        return 'Sted ' + str(self.id + self.navn + self.adresse)
+
+    def __str__(self) -> str:
+        return f"Id: {self.id}, stedsnavn: {self.sted}, adresse: {self.adresse}"
+
+##########################################################################
+>>>>>>> Stashed changes
