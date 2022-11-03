@@ -1,7 +1,7 @@
-# c
+#c
 
 class Kategori:
-    def __init__(self, id = 1, navn, prioritet):
+    def __init__(self, id = 1, navn=None, prioritet=None):
         self.id = id
         self.navn = navn
         self.prioritet = prioritet
