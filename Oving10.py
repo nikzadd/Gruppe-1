@@ -13,6 +13,7 @@ class Kategori:
     def __str__ (self):
         return f"id: {self.id}, navn: {self.navn}, prioritet: {self.prioritet} "
 
+##################################################################################
 #d
 
 def lag_kategori():
@@ -24,3 +25,8 @@ def lag_kategori():
 
 if __name__ =="__main__":
     lag_kategori()
+
+##########################################################################
+
+#e
+
