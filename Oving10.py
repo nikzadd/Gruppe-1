@@ -48,6 +48,17 @@ if __name__ =="__main__":
     kategorier(kategori_tom)
     kategori_til_tekstfil(kategori_tom)
 
+###########################################
+
+#f
+
+
+
+
+
+
+
+
 
 ########################
 
