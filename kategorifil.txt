@@ -1,2 +1,2 @@
 Indeks: ID: Navn: Prioritet: 
-121; erfe; 1; 
+12; daniel; 1; 

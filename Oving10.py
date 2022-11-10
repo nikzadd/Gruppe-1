@@ -25,7 +25,7 @@ def lag_kategori():
 
 ##########################################################################
 
-#e
+#e & f
 
 def kategorier(avtaleliste, overskrift="Kategori:"):
     i = 0
@@ -40,25 +40,6 @@ def kategori_til_tekstfil(avtaler):
     kategorifil.write("Indeks: " + "ID: "  + "Navn: " + "Prioritet: " + "\n")
     for avtale in avtaler:
         kategorifil.write(str(str(avtale.id) + "; " + str(avtale.navn) + "; " + str(avtale.prioritet) + "; " +"\n"))
-
-
-if __name__ =="__main__":
-    kategori_tom = []
-    kategori_tom.append(lag_kategori())
-    kategorier(kategori_tom)
-    kategori_til_tekstfil(kategori_tom)
-
-
-###########################################
-
-#f
-
-
-
-
-
-
-
 
 
 ##########################################################################
@@ -82,8 +63,35 @@ class Sted:
 
 #h
 def nytt_sted():
-    id = str(input("Skriv inn id: "))
-    navn = input("Skriv navn: ")
-    adresse = input("Skriv inn adresse:")
-    nyttSted = Kategori(id, navn, adresse)
+    nyid = str(input("Skriv inn id: "))
+    nynavn = input("Skriv navn: ")
+    nyadresse = input("Skriv inn adresse:")
+    nyttSted = Kategori(nyid, nynavn, nyadresse)
     return nyttSted
+
+############################################
+
+#i
+
+def nyesteder(avtaler):
+    stedfil = open("stedfil.txt", "w", encoding="UTF8")
+    stedfil.write("Indeks: " + "ID: "  + "Navn: " + "Adresse: " + "Ny Adresse" + "\n")
+    for avtale in avtaler:
+        stedfil.write(str(str(avtale.nyid) + "; " + str(avtale.nynavn) + "; " + str(avtale.nyadresse) + ";" + str(avtale.nyttsted) + "; " +"\n"))
+
+
+
+
+
+
+
+#################################
+
+
+#La stå nederst
+
+if __name__ =="__main__":
+    kategori_tom = []
+    kategori_tom.append(lag_kategori())
+    kategorier(kategori_tom)
+    kategori_til_tekstfil(kategori_tom)
