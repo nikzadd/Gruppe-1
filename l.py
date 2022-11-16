@@ -2,6 +2,7 @@ from h import avtale_til_tekstfil
 from f import lag_avtale
 from g import avtaler
 from i import lesing_av_fil
+from datetime import datetime
 
 liste_med_avtaler = []
 
@@ -12,7 +13,8 @@ meny_valg = {
     4: "Skrive ut alle avtalene",
     5: "Slette en avtale",
     6: "Redigere en avtale",
-    7: "Avslutte"
+    7: "Avslutte",
+    8: "Sjekke samme dato"
 }
 
 def print_meny():
@@ -30,6 +32,8 @@ def valg3():
 def valg4():
     avtaler(liste_med_avtaler)
 
+#m
+
 def valg5():
     valget = int(input("Hvilken avtale vil du fjerne? Skriv nummeret til avtalen: "))
     try:
@@ -39,14 +43,24 @@ def valg5():
         print("Oisann! Det gikk ikke")
     print("Da fjernet du avtale nummer", valget)
 
+#n
+
 def valg6():
     rediger_valg = int(input("Hvilken avtale vil du redigere? Skriv nummeret til avtalen: "))
     try:
         liste_med_avtaler.pop(rediger_valg-1)
         avtale_til_tekstfil(liste_med_avtaler)
         valg3()
+        
     except ValueError:
         pass
+
+def avtale_sjekk(dato, avtale_tom):
+    liste_avtaler_samtidig = []
+    for avtale in avtale_tom:
+        if avtale.starttidspunkt == dato: #Avtale.startidspunkt
+            liste_avtaler_samtidig.append(avtale.tittel)
+    return liste_avtaler_samtidig
 
 while(True):
     print_meny()
@@ -71,5 +85,9 @@ while(True):
     elif valg == 7:
         print("Takk og ha det bra!")
         break
+    elif valg == 8:
+        datoen = (input("Skriv inn en dato på datetime-format:"))
+        datetimedato = datetime.fromisoformat(datoen)
+        print(avtale_sjekk(datetimedato, liste_med_avtaler))
     else:
         print("Ugyldig valg, velg et nummer mellom 1 og 5:")

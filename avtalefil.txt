@@ -1,2 +1,6 @@
 Avtalenummer: Tittel: Sted: Starttidspunkt: Varighet: 
+<<<<<<< HEAD
 1; skoleredigert; skolenredigert; 2022-10-30 00:00:00; 2
+=======
+1; tee; tete; 1111-11-11 00:00:00; 432
+>>>>>>> aa4eeccdd549ae97844a087cd9f8ee02163f7806

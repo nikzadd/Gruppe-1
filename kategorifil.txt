@@ -1,0 +1,2 @@
+Indeks: ID: Navn: Prioritet: 
+12; daniel; 1; 

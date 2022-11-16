@@ -1,19 +1,24 @@
 from datetime import datetime
+from g import avtaler
+from f import Avtale
 
 
-#Hent fra avtalefil
+def avtale_sjekk(dato, avtale_tom):
+    liste_avtaler_samtidig = []
+    for avtale in avtale_tom:
+        if avtale.starttidspunkt == dato: #Avtale.startidspunkt
+            liste_avtaler_samtidig.append(avtale)
+    return liste_avtaler_samtidig
 
-def liste_sjekk(liste_avtaler, dato):
-    liste_avtaler = []
-    with open("avtalefil.txt", "r", encoding="UTF8") as avtalefil:
-        for linje in avtalefil:
-            if dato == dato:
-                linje.append = liste_avtaler
-    return liste_avtaler
+avtale_sjekk("dato", )
 
-#test
-if __name__ == "__main__":
-    dato = input("Skriv inn dato på formen YYYY-MM-DD XX:XX:XX: ")
-    #dato = datetime.fromisoformat(dato_sjekk)
-    test = liste_sjekk(liste_sjekk, dato)
-    print(test)
+
+# if __name__ == "__main__":
+#     avtale_liste = []
+#     avtale_liste.append(lag_avtale())
+#     avtaler(avtale_liste)
+#     print(avtale_liste)
+#     dato_sjekk = input("Sjekk dato: ")
+#     dato_1 = datetime.fromisoformat(dato_sjekk)
+#     avtale_sjekk(avtale_liste, dato_1)
+
