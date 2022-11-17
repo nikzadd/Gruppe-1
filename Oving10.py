@@ -79,7 +79,15 @@ def nyesteder(avtaler):
     for avtale in avtaler:
         stedfil.write(str(str(avtale.nyid) + "; " + str(avtale.nynavn) + "; " + str(avtale.nyadresse) + ";" + str(avtale.nyttsted) + "; " +"\n"))
 
+############################################################################
 
+#j
+
+def steder(stedsliste, overskrift = "Steder: "):
+    i = 0
+    print(overskrift)
+    for linje in range(len(stedsliste)):
+        print("")
 
 
 
