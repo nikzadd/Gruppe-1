@@ -87,7 +87,9 @@ def steder(stedsliste, overskrift = "Steder: "):
     i = 0
     print(overskrift)
     for linje in range(len(stedsliste)):
-        print("")
+        print("Indeks:", i+1, "Id:", stedsliste[i].id, "Navn:", stedsliste[i].navn, "Adresse:", stedsliste[i].adresse)
+        i += 1
+
 
 
 
