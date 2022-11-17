@@ -65,7 +65,7 @@ class Sted:
 def nytt_sted():
     nyid = str(input("Skriv inn id: "))
     nynavn = input("Skriv navn: ")
-    nyadresse = input("Skriv inn adresse:")
+    nyadresse = int(input("Skriv inn adresse:"))
     nyttSted = Kategori(nyid, nynavn, nyadresse)
     return nyttSted
 
@@ -73,11 +73,11 @@ def nytt_sted():
 
 #i
 
-def nyesteder(avtaler):
+def nyesteder(steder):
     stedfil = open("stedfil.txt", "w", encoding="UTF8")
     stedfil.write("Indeks: " + "ID: "  + "Navn: " + "Adresse: " + "Ny Adresse" + "\n")
-    for avtale in avtaler:
-        stedfil.write(str(str(avtale.nyid) + "; " + str(avtale.nynavn) + "; " + str(avtale.nyadresse) + ";" + str(avtale.nyttsted) + "; " +"\n"))
+    for sted in steder:
+        stedfil.write(str(str(sted.nyid) + "; " + str(sted.nynavn) + "; " + str(sted.nyadresse) + ";" + str(sted.nyttsted) + "; " +"\n"))
 
 ############################################################################
 
@@ -107,7 +107,7 @@ class Avtale:
         self.varighet = varighet
         self.kategori = kategori
     def __str__(self):
-        return 'Avtale ' +str(self.tittel)+'/'+str(self.sted)+'/'+int(self.starttidspunkt)+':'+int(self.varighet)+'/'+int(self.kategori)
+        return 'Avtale ' + str(self.tittel)+'/'+ str(self.sted)+'/'+ int(self.starttidspunkt)+':'+int(self.varighet)+'/'+int(self.kategori)
 
 
 tittel = input ( " Skriv inn avtale")
@@ -122,6 +122,13 @@ kategori = str(kategori)
 
 DinAvtale = Avtale(tittel, sted, starttidspunkt, varighet, kategori)
 print(DinAvtale)
+
+
+#######################################
+
+#n
+
+
 
 
 
