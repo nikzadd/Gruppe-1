@@ -95,6 +95,33 @@ def steder(stedsliste, overskrift = "Steder: "):
 
 #################################
 
+#k
+
+class Avtale:
+    def __init__(self, tittel, sted, starttidspunkt, varighet, kategori):
+        self.tittel = tittel
+        self.sted = sted
+        self.starttidspunkt = starttidspunkt
+        self.varighet = varighet
+        self.kategori = kategori
+    def __str__(self):
+        return 'Avtale ' +str(self.tittel)+'/'+str(self.sted)+'/'+int(self.starttidspunkt)+':'+int(self.varighet)+'/'+int(self.kategori)
+
+
+tittel = input ( " Skriv inn avtale")
+sted = input ( " Vennligst skriv sted")
+sted = str(sted)
+starttidspunkt = input ( " Vennligst skriv starttidspunkt")
+starttidspunkt = int(starttidspunkt)
+varighet = input ( " Vennligst skriv inn varighet")
+varighet = int(varighet)
+kategori = input ('Hvilken kategori tilhører avtalen')
+kategori = str(kategori)
+
+DinAvtale = Avtale(tittel, sted, starttidspunkt, varighet, kategori)
+print(DinAvtale)
+
+
 
 #La stå nederst
 
