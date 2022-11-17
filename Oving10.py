@@ -127,14 +127,7 @@ kategori = str(kategori)
 DinAvtale = Avtale(tittel, sted, starttidspunkt, varighet, kategori)
 print(DinAvtale)
 
-
-#######################################
-
-#n
-
-
-
-
+##############################
 
 #L
 
@@ -151,6 +144,17 @@ def avtale_til_tekstfil(avtaler):
         avtalefil.write(streng)
      
     #"tittel;stedid;starttidspunkt;varighet;katid1,katid2,katid3"
+
+
+#######################################
+
+#n
+
+
+
+
+
+
 
 
 
