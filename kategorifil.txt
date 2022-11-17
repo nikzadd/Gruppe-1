@@ -1,2 +1,4 @@
 Indeks: ID: Navn: Prioritet: 
 12; daniel; 1; 
+13; sivert; 1;
+14; siv; 2;

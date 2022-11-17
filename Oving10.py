@@ -225,17 +225,18 @@ def valg8():
 def valg9():
 #print=("kategorilista")
 #print=("Velg en kategori fra lista du vil legge til avtalen, ved hjelp av indeksen til kategorien")
-    kategorier()
-    avtaler(liste_med_avtaler)
-
-
-
-    nokkelord_kategori=(input("Søk på en kategori for en avtale"))
-    with open("avtalefil.txt",'w',encoding="UTF8") as nokkelord_open:
-        linjer=nokkelord_open.readlines()
+    #kategorier(kategorifil.txt)
+    with open("kategorifil.txt", "r",encoding="utf8") as kategorifil:
+        linjer=kategorifil.readlines()
         for linje in linjer:
-            if linje.find(nokkelord_kategori) != -1:
-                print("Avtalenummer:",linjer.index(linje)+1, linje)
+            print("Indeks",linjer.index(linje)+1, linje)
+#    avtaler(liste_med_avtaler)
+#    nokkelord_kategori=(input("Søk på en kategori for en avtale"))
+#    with open("avtalefil.txt",'w',encoding="UTF8") as nokkelord_open:
+#        linjer=nokkelord_open.readlines()
+#        for linje in linjer:
+#            if linje.find(nokkelord_kategori) != -1:
+#                print("Avtalenummer:",linjer.index(linje)+1, linje)
 valg9()
 
 
