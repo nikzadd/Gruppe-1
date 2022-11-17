@@ -20,8 +20,12 @@ def lag_kategori():
     id = input("Skriv inn ID: ")
     navn = str(input("Skriv navn: "))
     prioritet = int(input("Skriv inn prioritet. Skriv på format: "))
+    prioritet = i = 1
     Dinkategori = Kategori(id, navn, prioritet)
     return Dinkategori
+
+if __name__ =="__main__":
+    lag_kategori()
 
 ##########################################################################
 
