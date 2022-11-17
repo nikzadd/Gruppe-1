@@ -8,6 +8,11 @@ class Avtale:
         self.sted = sted
         self.starttidspunkt = starttidspunkt
         self.varighet = varighet
+        self.kategorier = []
+
+    def legg_til_kategori(self, kategori):
+        self.kategorier.append(kategori)
+
     def __str__(self):
         return 'Avtale ' +str(self.tittel)+'/'+str(self.sted)+'/'+int(self.starttidspunkt)+':'+int(self.varighet)
 

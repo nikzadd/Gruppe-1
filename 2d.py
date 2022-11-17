@@ -1,7 +1,5 @@
-#c
-
 class Kategori:
-    def __init__(self, id = 1, navn=None, prioritet=None):
+    def __init__(self, id, navn, prioritet):
         self.id = id
         self.navn = navn
         self.prioritet = prioritet
@@ -13,8 +11,7 @@ class Kategori:
     def __str__ (self):
         return f"id: {self.id}, navn: {self.navn}, prioritet: {self.prioritet} "
 
-#d
-###################################################
+
 def lag_kategori():
     id = input("Skriv inn ID: ")
     navn = str(input("Skriv navn: "))
