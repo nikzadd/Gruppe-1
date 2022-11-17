@@ -160,7 +160,11 @@ def lag_avtale():
     i = 0
     tittel = input("Skriv inn hva avtalen gjelder: ")
     stedet = input("Velg et sted fra sted-lista og skriv indeksen på stedet du vil velge:")
+<<<<<<< Updated upstream
 
+=======
+    sted = 
+>>>>>>> Stashed changes
     dato = input("Skriv inn starttidspunkt. Skriv på format: YYYY-MM-DD TT:MM:SS")
     starttidspunkt = datetime.fromisoformat(dato)
     varighet = int(input("Skriv varighet på avtalen: "))
