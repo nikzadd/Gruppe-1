@@ -83,11 +83,11 @@ def nyesteder(avtaler):
 
 #j
 
-def steder(stedsliste, overskrift = "Steder: "):
+def steder(avtaleliste, overskrift = "Steder: "):
     i = 0
     print(overskrift)
-    for linje in range(len(stedsliste)):
-        print("Indeks:", i+1, "Id:", stedsliste[i].id, "Navn:", stedsliste[i].navn, "Adresse:", stedsliste[i].adresse)
+    for linje in range(len(avtaleliste)):
+        print("Indeks:", i+1, "Id:", avtaleliste[i].id, "Navn:", avtaleliste[i].navn, "Adresse:", avtaleliste[i].adresse)
         i += 1
 
 
@@ -97,6 +97,47 @@ def steder(stedsliste, overskrift = "Steder: "):
 
 #################################
 
+#k
+
+class Avtale:
+    def __init__(self, tittel, sted, starttidspunkt, varighet, kategori):
+        self.tittel = tittel
+        self.sted = sted
+        self.starttidspunkt = starttidspunkt
+        self.varighet = varighet
+        self.kategori = kategori
+    def __str__(self):
+        return 'Avtale ' +str(self.tittel)+'/'+str(self.sted)+'/'+int(self.starttidspunkt)+':'+int(self.varighet)+'/'+int(self.kategori)
+
+
+tittel = input ( " Skriv inn avtale")
+sted = input ( " Vennligst skriv sted")
+sted = str(sted)
+starttidspunkt = input ( " Vennligst skriv starttidspunkt")
+starttidspunkt = int(starttidspunkt)
+varighet = input ( " Vennligst skriv inn varighet")
+varighet = int(varighet)
+kategori = input ('Hvilken kategori tilhører avtalen')
+kategori = str(kategori)
+
+DinAvtale = Avtale(tittel, sted, starttidspunkt, varighet, kategori)
+print(DinAvtale)
+
+
+
+
+
+
+
+
+
+###########################################################################
+
+#n
+
+
+
+##########################################################################
 
 #La stå nederst
 
