@@ -83,11 +83,11 @@ def nyesteder(avtaler):
 
 #j
 
-def steder(stedsliste, overskrift = "Steder: "):
+def steder(avtaleliste, overskrift = "Steder: "):
     i = 0
     print(overskrift)
-    for linje in range(len(stedsliste)):
-        print("Indeks:", i+1, "Id:", stedsliste[i].id, "Navn:", stedsliste[i].navn, "Adresse:", stedsliste[i].adresse)
+    for linje in range(len(avtaleliste)):
+        print("Indeks:", i+1, "Id:", avtaleliste[i].id, "Navn:", avtaleliste[i].navn, "Adresse:", avtaleliste[i].adresse)
         i += 1
 
 
@@ -124,6 +124,20 @@ DinAvtale = Avtale(tittel, sted, starttidspunkt, varighet, kategori)
 print(DinAvtale)
 
 
+
+
+
+
+
+
+
+###########################################################################
+
+#n
+
+
+
+##########################################################################
 
 #La stå nederst
 
