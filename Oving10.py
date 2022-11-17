@@ -129,7 +129,6 @@ kategori = str(kategori)
 DinAvtale = Avtale(tittel, sted, starttidspunkt, varighet, kategori)
 print(DinAvtale)
 
-###################################################
 
 #L
 
@@ -146,6 +145,17 @@ def avtale_til_tekstfil(avtaler):
         avtalefil.write(streng)
      
     #"tittel;stedid;starttidspunkt;varighet;katid1,katid2,katid3"
+
+
+#######################################
+
+#n
+
+
+
+
+
+
 
 
 
@@ -172,6 +182,70 @@ def lag_avtale():
     return DinAvtale
 
 ##########################################################################
+
+#O
+meny_valg = {
+    1: "Lese inn avtaler fra fil",
+    2: "Skrive avtale til fil",
+    3: "Skrive inn en ny avtale",
+    4: "Skrive ut alle avtalene",
+    5: "Slette en avtale",
+    6: "Redigere en avtale",
+    7: "Avslutte",
+    8: "Sjekke samme dato",
+    9: "Legg til kategori for en avtale"}
+def print_meny():
+    for valget in meny_valg.keys():
+        print (valget, "--", meny_valg[valget] )
+def valg1():
+    lesing_av_fil()
+def valg2():
+    avtale_til_tekstfil(liste_med_avtaler)
+def valg3():
+    liste_med_avtaler.append(lag_avtale())
+def valg4():
+    avtaler(liste_med_avtaler)
+def valg5():
+    valget = int(input("Hvilken avtale vil du fjerne? Skriv nummeret til avtalen: "))
+    try:
+        liste_med_avtaler.pop(valget-1)
+        avtale_til_tekstfil(liste_med_avtaler)
+    except ValueError:
+        print("Oisann! Det gikk ikke")
+    print("Da fjernet du avtale nummer", valget)
+def valg6():
+    rediger_valg = int(input("Hvilken avtale vil du redigere? Skriv nummeret til avtalen: "))
+    try:
+        liste_med_avtaler.pop(rediger_valg - 1)
+        avtale_til_tekstfil(liste_med_avtaler)
+        valg3()
+
+    except ValueError:
+        pass
+def valg7():
+    print("Takk og ha det bra!")
+
+def valg8():
+    datoen = (input("Skriv inn en dato på datetime-format:"))
+    datetimedato = datetime.fromisoformat(datoen)
+    print(avtale_sjekk(datetimedato, liste_med_avtaler))
+def valg9():
+#print=("kategorilista")
+#print=("Velg en kategori fra lista du vil legge til avtalen, ved hjelp av indeksen til kategorien")
+    kategorier()
+    avtaler(liste_med_avtaler)
+
+
+
+    nokkelord_kategori=(input("Søk på en kategori for en avtale"))
+    with open("avtalefil.txt",'w',encoding="UTF8") as nokkelord_open:
+        linjer=nokkelord_open.readlines()
+        for linje in linjer:
+            if linje.find(nokkelord_kategori) != -1:
+                print("Avtalenummer:",linjer.index(linje)+1, linje)
+valg9()
+
+
 
 #La stå nederst
 
