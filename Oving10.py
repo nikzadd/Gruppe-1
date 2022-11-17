@@ -125,6 +125,21 @@ print(DinAvtale)
 
 
 
+#L
+
+def avtale_til_tekstfil(avtaler):
+    with open("avtalefil.txt", "w", encoding="UTF-8") as avtalefil:
+        avtalefil.write("Avtalenummer: " + "Tittel: " + "Sted: " + "Starttidspunkt: " + "Varighet: " + "\n")
+        streng = ""
+        for avtale in avtaler:
+            streng += f"{avtale.tittel};{avtale.sted.id};{avtale.starttidspunkt};{avtale.varighet};"
+            for kategori in avtale.kategorier:
+                streng += f"{kategori.id},"
+        
+        streng += "\n"
+        avtalefil.write(streng)
+     
+    #"tittel;stedid;starttidspunkt;varighet;katid1,katid2,katid3"
 
 
 
