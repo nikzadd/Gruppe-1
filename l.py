@@ -5,6 +5,8 @@ from i import lesing_av_fil
 from datetime import datetime
 
 liste_med_avtaler = []
+liste_med_steder = []
+liste_med_kategorier = []
 
 meny_valg = {
     1: "Lese inn avtaler fra fil",
@@ -14,7 +16,7 @@ meny_valg = {
     5: "Slette en avtale",
     6: "Redigere en avtale",
     7: "Avslutte",
-    8: "Sjekke samme dato"
+    8: "Sjekke samme dato",
 }
 
 def print_meny():

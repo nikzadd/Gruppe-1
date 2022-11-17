@@ -1,3 +1,7 @@
+from h import avtale_til_tekstfil
+from f import lag_avtale
+from g import avtaler
+from i import lesing_av_fil
 import datetime as datetime
 
 #c
@@ -22,7 +26,6 @@ def lag_kategori():
     id = input("Skriv inn ID: ")
     navn = str(input("Skriv navn: "))
     prioritet = int(input("Skriv inn prioritet. Skriv på format: "))
-    prioritet = i = 1
     Dinkategori = Kategori(id, navn, prioritet)
     return Dinkategori
 
@@ -71,7 +74,7 @@ class Sted:
 def nytt_sted():
     nyid = str(input("Skriv inn id: "))
     nynavn = input("Skriv navn: ")
-    nyadresse = int(input("Skriv inn adresse:"))
+    nyadresse = str(input("Skriv inn adresse:"))
     nyttSted = Kategori(nyid, nynavn, nyadresse)
     return nyttSted
 
@@ -113,7 +116,7 @@ class Avtale:
         self.varighet = varighet
         self.kategori = kategori
     def __str__(self):
-        return 'Avtale ' + str(self.tittel)+'/'+ str(self.sted)+'/'+ int(self.starttidspunkt)+':'+int(self.varighet)+'/'+int(self.kategori)
+        return 'Avtale ' + str(self.tittel)+'/'+ str(self.sted)+'/'+ str(self.starttidspunkt)+':'+str(self.varighet)+'/'+str(self.kategori)
 
 
 tittel = input ( " Skriv inn avtale")
@@ -149,37 +152,14 @@ def avtale_til_tekstfil(avtaler):
 
 #######################################
 
-#n
+#m, o og p
 
+from datetime import datetime
 
+liste_med_avtaler = []
+liste_med_steder = []
+liste_med_kategorier = []
 
-
-
-
-
-
-
-
-
-
-###########################################################################
-
-#n
-
-def lag_avtale():
-    i = 0
-    tittel = input("Skriv inn hva avtalen gjelder: ")
-    stedet = input("Velg et sted fra sted-lista og skriv indeksen på stedet du vil velge:")
-    sted = 
-    dato = input("Skriv inn starttidspunkt. Skriv på format: YYYY-MM-DD TT:MM:SS")
-    starttidspunkt = datetime.fromisoformat(dato)
-    varighet = int(input("Skriv varighet på avtalen: "))
-    DinAvtale = Avtale(tittel, sted, starttidspunkt, varighet)
-    return DinAvtale
-
-##########################################################################
-
-#O
 meny_valg = {
     1: "Lese inn avtaler fra fil",
     2: "Skrive avtale til fil",
@@ -189,26 +169,43 @@ meny_valg = {
     6: "Redigere en avtale",
     7: "Avslutte",
     8: "Sjekke samme dato",
-    9: "Legg til kategori for en avtale"}
+    9: "Legge til katergori",
+    10: "Legge til sted",
+    11: "Finne avtaler på et bestemt sted"
+}
+
+
 def print_meny():
     for valget in meny_valg.keys():
-        print (valget, "--", meny_valg[valget] )
+        print(valget, "--", meny_valg[valget])
+
+
 def valg1():
     lesing_av_fil()
+
+
 def valg2():
     avtale_til_tekstfil(liste_med_avtaler)
+
+
 def valg3():
     liste_med_avtaler.append(lag_avtale())
+
+
 def valg4():
     avtaler(liste_med_avtaler)
+
+
 def valg5():
     valget = int(input("Hvilken avtale vil du fjerne? Skriv nummeret til avtalen: "))
     try:
-        liste_med_avtaler.pop(valget-1)
+        liste_med_avtaler.pop(valget - 1)
         avtale_til_tekstfil(liste_med_avtaler)
     except ValueError:
         print("Oisann! Det gikk ikke")
     print("Da fjernet du avtale nummer", valget)
+
+
 def valg6():
     rediger_valg = int(input("Hvilken avtale vil du redigere? Skriv nummeret til avtalen: "))
     try:
@@ -218,14 +215,9 @@ def valg6():
 
     except ValueError:
         pass
-def valg7():
-    print("Takk og ha det bra!")
 
-def valg8():
-    datoen = (input("Skriv inn en dato på datetime-format:"))
-    datetimedato = datetime.fromisoformat(datoen)
-    print(avtale_sjekk(datetimedato, liste_med_avtaler))
 def valg9():
+<<<<<<< Updated upstream
 #print=("kategorilista")
 #print=("Velg en kategori fra lista du vil legge til avtalen, ved hjelp av indeksen til kategorien")
     #kategorier(kategorifil.txt)
@@ -241,6 +233,81 @@ def valg9():
 #            if linje.find(nokkelord_kategori) != -1:
 #                print("Avtalenummer:",linjer.index(linje)+1, linje)
 valg9()
+=======
+    liste_med_kategorier.append(lag_kategori())
+
+def valg10():
+    liste_med_steder.append(nytt_sted())
+
+def valg11():
+    nokkelord = str(input("Skriv inn stedet du vil finne avtale til: "))
+    for linje in liste_med_steder:
+        if linje.find(nokkelord) != -1:
+            print("Sted:",linjer.index(linje)+1, linje)
+    print(nytt_sted())
+
+
+
+def avtale_sjekk(dato, avtale_tom):
+    liste_avtaler_samtidig = []
+    for avtale in avtale_tom:
+        if avtale.starttidspunkt == dato:  # Avtale.startidspunkt
+            liste_avtaler_samtidig.append(avtale.tittel)
+    return liste_avtaler_samtidig
+
+
+while (True):
+    print_meny()
+    valg = ""
+    try:
+        valg = int(input("Hva ønsker du å gjøre?: "))
+    except ValueError:
+        print("Feil inntasting, velg et nummer:")
+
+    if valg == 1:
+        valg1()
+    elif valg == 2:
+        valg2()
+    elif valg == 3:
+        valg3()
+    elif valg == 4:
+        valg4()
+    elif valg == 5:
+        valg5()
+    elif valg == 6:
+        valg6()
+    elif valg == 7:
+        print("Takk og ha det bra!")
+        break
+    elif valg == 8:
+        datoen = (input("Skriv inn en dato på datetime-format:"))
+        datetimedato = datetime.fromisoformat(datoen)
+        print(avtale_sjekk(datetimedato, liste_med_avtaler))
+    elif valg == 9:
+        valg9()
+    elif valg == 10:
+        valg10()
+    elif valg == 11:
+        valg11()
+    else:
+        print("Ugyldig valg, velg et nummer mellom 1 og 5:")
+
+###########################################################################
+
+#n
+
+def lag_avtale():
+    tittel = input("Skriv inn hva avtalen gjelder: ")
+    stedet = input("Velg et sted fra sted-lista og skriv indeksen på stedet du vil velge:")
+    sted = liste_med_steder[stedet]
+    dato = input("Skriv inn starttidspunkt. Skriv på format: YYYY-MM-DD TT:MM:SS")
+    starttidspunkt = datetime.fromisoformat(dato)
+    varighet = int(input("Skriv varighet på avtalen: "))
+    DinAvtale = Avtale(tittel, sted, starttidspunkt, varighet)
+    return DinAvtale
+
+##########################################################################
+>>>>>>> Stashed changes
 
 
 
